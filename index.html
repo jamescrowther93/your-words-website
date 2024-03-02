@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Words - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Comfortaa', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #ef7474;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 100px; /* Adjusted width */
+            height: auto; /* To maintain aspect ratio */
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        .nav-links a.home {
+            background-color: #ff9999;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .left-section {
+            width: 50%;
+            padding: 20px;
+            background-color: #ef7474; /* Full left side colored */
+            color: #fff;
+        }
+
+        .right-section {
+            width: 45%;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .input-box {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            font-family: 'Comfortaa', cursive;
+            display: block;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        select {
+            width: 100%;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #ef7474;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-family: 'Comfortaa', cursive;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #ff9999;
+        }
+
+        .result-box {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-family: 'Comfortaa', cursive;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://i.postimg.cc/R6XQS0tw/your-logo.png" alt="Your Words Logo">
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="home">Home</a>
+            <a href="about.html">About</a>
+            <a href="forbusiness.html">For Business</a>
+            <a href="support.html">Support</a>
+        </nav>
+    </header>
+    <main>
+        <div class="left-section">
+            <h2>Welcome to Your Words</h2>
+            <p>Here at Your Words, we have assigned every phone number in the world a unique three-word combination.</p>
+            <p>Find out yours today.</p>
+            <p>Connecting the world, three words at a time</p>
+        </div>
+        <div class="right-section">
+            <div class="input-box">
+                <h2>Input your phone number below to find out your unique three word combination</h2>
+                <input type="text" id="phoneNumberInput" placeholder="Phone Number">
+                <button onclick="convertPhoneNumber()">Show me my words</button>
+                <div class="result-box">
+                    <p><strong>Result:</strong></p>
+                    <div id="wordResult"></div>
+                </div>
+            </div>
+            <div class="input-box">
+                <h2>Input your three words below to find out the corresponding phone number</h2>
+                <input type="text" id="wordInput1" placeholder="First Word">
+                <input type="text" id="wordInput2" placeholder="Second Word">
+                <input type="text" id="wordInput3" placeholder="Third Word">
+                <button onclick="convertWords()">Show me the number</button>
+                <div class="result-box">
+                    <p><strong>Result:</strong></p>
+                    <div id="phoneResult"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Words. All rights reserved.</p>
+    </footer>
+</body>
+</html>
