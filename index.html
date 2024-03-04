@@ -109,6 +109,23 @@
             font-family: 'Comfortaa', cursive;
             clear: both;
         }
+
+        .choose-words-link {
+            text-align: center;
+            margin-top: 10px;
+            background-color: #ef7474; /* Match the theme color */
+            padding: 10px; /* Add padding for better visibility */
+            border-radius: 5px; /* Add rounded corners */
+        }
+
+        .choose-words-link a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .choose-words-link a:hover {
+            color: #ff9999;
+        }
     </style>
 </head>
 <body>
@@ -138,6 +155,9 @@
                 <div class="result-box">
                     <p><strong>Result:</strong></p>
                     <div id="wordResult"></div>
+                </div>
+                <div class="choose-words-link">
+                    <a href="#">Don't like your words? Click here to choose your own</a>
                 </div>
             </div>
             <div class="input-box">
