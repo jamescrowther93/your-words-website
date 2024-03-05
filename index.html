@@ -78,13 +78,7 @@
         }
 
         select {
-            width: calc(100% - 20px);
-            padding: 10px;
-            margin-bottom: 10px;
-            font-family: 'Comfortaa', cursive;
-            display: block;
-            border-radius: 5px;
-            border: 1px solid #ccc;
+            width: 100%;
         }
 
         button {
@@ -105,7 +99,6 @@
             background-color: #f0f0f0;
             padding: 10px;
             border-radius: 5px;
-            margin-bottom: 20px;
         }
 
         footer {
@@ -116,26 +109,6 @@
             font-family: 'Comfortaa', cursive;
             clear: both;
         }
-
-        .custom-link {
-            display: block;
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        .custom-link-button {
-            padding: 10px 20px;
-            background-color: #ef7474;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            font-family: 'Comfortaa', cursive;
-            border-radius: 5px;
-            display: block;
-            text-align: center;
-            width: 100%;
-        }
-
     </style>
 </head>
 <body>
@@ -160,24 +133,23 @@
         <div class="right-section">
             <div class="input-box">
                 <h2>Input your phone number below to find out your unique three word combination</h2>
-                <select id="areaCodeSelect">
-                    <option value="+1">+1 (United States)</option>
-                    <option value="+44">+44 (United Kingdom)</option>
-                    <option value="+49">+49 (Germany)</option>
-                    <option value="+81">+81 (Japan)</option>
-                    <option value="+86">+86 (China)</option>
-                    <option value="+91">+91 (India)</option>
-                    <option value="+33">+33 (France)</option>
-                    <option value="+39">+39 (Italy)</option>
-                    <option value="+7">+7 (Russia)</option>
-                    <option value="+82">+82 (South Korea)</option>
+                <select id="areaCode">
+                    <option value="+1">🇺🇸 +1 (USA)</option>
+                    <option value="+44">🇬🇧 +44 (UK)</option>
+                    <option value="+91">🇮🇳 +91 (India)</option>
+                    <option value="+86">🇨🇳 +86 (China)</option>
+                    <option value="+81">🇯🇵 +81 (Japan)</option>
+                    <option value="+49">🇩🇪 +49 (Germany)</option>
+                    <option value="+7">🇷🇺 +7 (Russia)</option>
+                    <option value="+55">🇧🇷 +55 (Brazil)</option>
+                    <option value="+33">🇫🇷 +33 (France)</option>
+                    <option value="+39">🇮🇹 +39 (Italy)</option>
                 </select>
                 <input type="text" id="phoneNumberInput" placeholder="Phone Number">
                 <button onclick="convertPhoneNumber()">Show me my words</button>
                 <div class="result-box">
                     <p><strong>Result:</strong></p>
                     <div id="wordResult"></div>
-                    <button class="custom-link-button">Don't like your words? Click here to choose your own</button>
                 </div>
             </div>
             <div class="input-box">
